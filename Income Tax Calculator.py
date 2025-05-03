@@ -1,12 +1,12 @@
-#Income Tax Calculator
-#This program calculates the tax one should pay in a fiscal year by taking into consideration their annual personal income, 
-#tax credits, and any tax deductions that can be applied to the calculation. Note that this program may not reflect recent 
-#changes in the Canadian income tax system and that it is for educational purposes only. The actual amount of tax one must pay 
-#heavily depends on their unique situations and conditions, while this calculator is merely a simplified version of the
-#complex process.
-#May 17, 2024
+# Income Tax Calculator
+# This program calculates the tax one should pay in a fiscal year by taking into consideration their annual personal income, 
+#   tax credits, and any tax deductions that can be applied to the calculation. Note that this program may not reflect recent 
+#   changes in the Canadian income tax system and that it is for educational purposes only. The actual amount of tax one must pay 
+#   heavily depends on their unique situations and conditions, while this calculator is merely a simplified version of the
+#   complex process.
+# May 17, 2024
 
-#Checks the validity of the income entered
+# Checks the validity of the income entered
 netIncomeValid = False
 
 while netIncomeValid == False:
@@ -27,16 +27,16 @@ while netIncomeValid == False:
     
 print()
 
-#Taking tax deductions into consideration
+# Taking tax deductions into consideration
 print ("Tax deductions are the amounts of money deducted from your taxable income before applying tax credits.")
 
-#tax deduction input must be a number
+# Tax deduction input must be a number
 taxDeductionsValid = False
 while taxDeductionsValid == False:
-    #input must be a number
+    # Input must be a number
     try:
         taxDeductions = float(input("Enter the total amount of tax decductions possible: $"))
-        #tax deduction input must be a nonnegative number
+        # Tax deduction input must be a nonnegative number
         if taxDeductions >= 0:
             taxDeductionsValid = True
         else:
@@ -51,7 +51,7 @@ while taxDeductionsValid == False:
 totalTaxableIncome = netIncome-taxDeductions
 print ("Your total taxable income is ${}.".format(totalTaxableIncome))
 
-#Calculating tax amount based on brackets
+# Calculating tax amount based on brackets
 taxAmount = 0
 bracket1 = 55867
 rate1 = 0.145
@@ -85,10 +85,10 @@ else:
 
 print("Your tax amount before tax credits are applied is ${:.2f}".format(taxAmount))
 
-#Applying tax credits
+# Applying tax credits
 print()
 
-#tax credits must be a number
+# Tax credits must be a number
 taxCreditsValid = False
 while taxCreditsValid == False:
     #input must be a number
